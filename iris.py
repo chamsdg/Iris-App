@@ -114,11 +114,7 @@ def main():
         fig=plt.gcf()
         fig.set_size_inches(10,6)
         st.pyplot()
-    st.markdown("""
-        Le graphique ci-dessus montre la relation entre la longueur et la largeur 
-        des sépales. Maintenant, nous allons vérifier la relation entre la
-        longueur et la largeur des pétales.
-                 """)
+    
     
     if st.checkbox("Nuage de Points"):
         fig = data[data.species=='setosa'].plot(kind='scatter',x='petal_length',y='petal_width',color='orange', label='setosa')
@@ -130,12 +126,7 @@ def main():
         fig=plt.gcf()
         fig.set_size_inches(10,6)
         st.pyplot()
-    st.markdown("""
-        Comme nous pouvons le voir, les caractéristiques de Petal donnent une meilleure
-        division de cluster par rapport aux caractéristiques de Sepal. 
-        Ceci est une indication que les pétales peuvent aider à avoir de meilleures 
-        et précises prédictions sur le sépal.
-                """)
+   
         
     
     # Plot the training points
@@ -143,10 +134,7 @@ def main():
         sns.boxplot(x="species", y="sepal_length", data=data)
         st.pyplot()
         
-    st.markdown("""
-        Certaines de nos variables notamment virginica comportent des valeurs aberrantes.
-        dans ce qui suit, nous allons juger si il faut le gardé ou les supprimé.
-        """)
+   
     
     #if st.checkbox("Dispersion Plot"):
         #sns.scatterplot('sepal_length','sepal_width', hue = 'species', data = data)
