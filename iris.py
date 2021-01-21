@@ -93,6 +93,7 @@ def main():
     st.subheader("Vizualisation Dataset")
 
     # Show Plots
+    st.set_option('deprecation.showPyplotGlobalUse', False)
     if st.checkbox("Simple Bar Plot with Matplotlib "):
     	data.plot(kind='bar')
     	st.pyplot()
@@ -116,18 +117,7 @@ def main():
         st.pyplot()
     
     
-    if st.checkbox("Nuage de Points"):
-        fig = data[data.species=='setosa'].plot(kind='scatter',x='petal_length',y='petal_width',color='orange', label='setosa')
-        data[data.species=='versicolor'].plot(kind='scatter',x='petal_length',y='petal_width',color='blue', label='versicolor',ax=fig)
-        data[data.species=='virginica'].plot(kind='scatter',x='petal_length',y='petal_width',color='green', label='virginica', ax=fig)
-        fig.set_xlabel("petal_Length")
-        fig.set_ylabel("petal_width")
-        fig.set_title("petal Length VS width")
-        fig=plt.gcf()
-        fig.set_size_inches(10,6)
-        st.pyplot()
-   
-        
+       
     
     # Plot the training points
     if st.checkbox("Box Plot"):
