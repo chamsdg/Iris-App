@@ -16,15 +16,9 @@ import os
 import matplotlib.pyplot as plt
 from sklearn.metrics import roc_auc_score, roc_curve, accuracy_score,confusion_matrix,classification_report
 
-def main():
+def main(): 
     st.title("Iris EDA App")
     #st.subheader("EDA Web App with Streamlit ")
-    st.markdown("""
-    	#### Description
-    	Ceci est un projet d'ecole Initié par Monsieur Touré.
-        L'objectif de ce projet est de mettre en place un modele de ML qui a pour but
-        d'identifier puis de predire la classe de ses fleurs. 
-    	""")
 
     # Your code goes below
     # Our Dataset
